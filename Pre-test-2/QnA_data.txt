@@ -1,0 +1,29 @@
+Q: What is the OSI model?
+A: The OSI (Open Systems Interconnection) model is a conceptual framework that standardizes the functions of a telecommunication or computing system into seven distinct layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application.
+
+Q: What is the difference between TCP and UDP?
+A: TCP (Transmission Control Protocol) is connection-oriented and provides reliable data transfer with error checking and flow control. UDP (User Datagram Protocol) is connectionless and does not guarantee delivery, making it faster but less reliable.
+
+Q: What is an IP address?
+A: An IP address is a unique identifier assigned to a device on a network, used for locating and identifying devices in communication. It can be either IPv4 (e.g., 192.168.1.1) or IPv6 (e.g., 2001:0db8:85a3::8a2e:0370:7334).
+
+Q: What is a subnet mask?
+A: A subnet mask is used in IP networking to divide an IP address into a network and host portion. It helps in determining which part of the IP address refers to the network and which part refers to the device.
+
+Q: What is DNS and how does it work?
+A: DNS (Domain Name System) translates human-readable domain names (like [www.example.com](http://www.example.com)) into IP addresses that computers use to identify each other on the network. It functions like a phonebook for the internet.
+
+Q: What is the difference between a hub, a switch, and a router?
+A: A hub broadcasts data to all devices, a switch sends data only to the intended recipient device using MAC addresses, and a router connects different networks and routes data using IP addresses.
+
+Q: What is ARP?
+A: ARP (Address Resolution Protocol) is used to map an IP address to a MAC address on a local area network. It enables devices to find each other's hardware address.
+
+Q: What is a firewall?
+A: A firewall is a network security device or software that monitors and controls incoming and outgoing network traffic based on predetermined security rules, acting as a barrier between a trusted and an untrusted network.
+
+Q: What is the purpose of NAT?
+A: NAT (Network Address Translation) allows multiple devices on a local network to share a single public IP address. It helps conserve global IP addresses and provides a layer of security.
+
+Q: What is bandwidth?
+A: Bandwidth refers to the maximum rate at which data can be transferred over a network connection in a given amount of time, usually measured in bits per second (bps).
