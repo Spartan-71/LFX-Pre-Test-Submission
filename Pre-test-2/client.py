@@ -10,23 +10,25 @@ async def main():
 
         # make MCP calls with the context
         tools = await client.list_tools()
-        print(f"Available tools:\n{tools}\n")
-        # print(f"Name: {tools[0].name}")
-        # print(f"Description: {tools[0].description}")
-        # print(f"Input Schema: {tools[0].inputSchema}\n")
+        # print(f"Available tools:\n{tools}\n")
+        print("------------Available Tools---------------")
+        print(f"Name: {tools[0].name}")
+        print(f"Description: {tools[0].description}")
+        print(f"Input Schema: {tools[0].inputSchema}\n")
         
 
         # get the resources
+        print("---------------Resources------------------")
         resources = await client.list_resources()
-        print(f"Available Resource: {resources}\n")
-        # print(f"Name: {resources[0].name}")
-        # print(f"Description: {resources[0].description}")
-        # print(f"URI: {resources[0].uri}\n")
+        # print(f"Available Resource: {resources}\n")
+        print(f"Name: {resources[0].name}")
+        print(f"Description: {resources[0].description}")
+        print(f"URI: {resources[0].uri}\n")
 
         query = input("Enter the query: ")
-        print(query)
+        print()
         # calling the search_in_file tool with a query
-        result = await client.call_tool("search_in_file",{"query":"What is FastMCP?"})
+        result = await client.call_tool("search_in_file",{"query":query})
         print(f"Result of tool calling:\n{result[0].text}\n")
 
     # connection is closed automatically

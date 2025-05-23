@@ -28,8 +28,6 @@ else:
 async def search_in_file(query: str, ctx: Context) -> str:
     """
     Search for a query in the Q&A text file and return relevant sections.
-    
-    The LLM will need to interpret the text file format itself.
     """
     # Access the file through the MCP resource system
 
