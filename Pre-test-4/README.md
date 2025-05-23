@@ -8,11 +8,11 @@ Explain your choice of test subjects and how you plan to get the source question
 
 I explored the Linux Foundation’s course catalog, which includes certifications, instructor-led courses, and SkillCred programs. From these, I chose the following areas based on my interests:
 
-* **AI & ML**
-* **Linux Kernel Development**
-* **Open-Source Best Practices**
+* **AI & ML** ([Link](https://training.linuxfoundation.org/full-catalog/?_sft_topic_area=ai-machine-learning))
+* **Linux Kernel Development** ([Link](https://training.linuxfoundation.org/full-catalog/?_sft_topic_area=linux-kernel-development))
+* **Open-Source Best Practices** ([Link](https://training.linuxfoundation.org/full-catalog/?_sft_topic_area=open-source-best-practice))
 
-Recently, I completed a beginner-level course in Linux Kernel Development([LFD 103](https://www.credly.com/badges/18e7fa37-dda3-4ae9-8688-ce53d42dce09/public_url)) through the Linux Foundation that taught me How can I actually contribute to the linux kernel. I thoroughly enjoyed the experience, which sparked my interest in exploring kernel development more deeply. Additionally, AI/ML remains my primary area of focus, and I’m always eager to expand my knowledge in this rapidly evolving field. As part of my open-source journey, I’ve also learned several industry best practices and would love to continue learning more.
+Recently, I completed a beginner-level course in Linux Kernel Development ([LFD 103](https://www.credly.com/badges/18e7fa37-dda3-4ae9-8688-ce53d42dce09/public_url)) through the Linux Foundation that taught me How can I actually contribute to the linux kernel. I thoroughly enjoyed the experience, which sparked my interest in exploring kernel development more deeply. Additionally, AI/ML remains my primary area of focus, and I’m always eager to expand my knowledge in this rapidly evolving field. As part of my open-source journey, I’ve also learned several industry best practices and would love to continue learning more.
 
 
 ### 2] How to source questions and answers?
