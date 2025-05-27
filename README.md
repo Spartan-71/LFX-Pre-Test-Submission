@@ -9,7 +9,6 @@
 ## Project Title: MCP-based AI agents to help learners prep for LF certifications
 
 ### References:
-- Cover Letter: [Click here](https://docs.google.com/document/d/1JkUZhkBobIEHS9F-E5KPuYklMUkEsJyWlSCNMt-WTEU/edit?usp=sharing)
 - Resume: [Click here](https://drive.google.com/file/d/14uV2k5qQfjcfRQZeibioHQiV-FPMAjBZ/view?usp=sharing)
 - Email Address: anishdabhane71@gmail.com
 - LinkedIn: [Click here](https://www.linkedin.com/in/anish-dabhane-0669781b5/)
