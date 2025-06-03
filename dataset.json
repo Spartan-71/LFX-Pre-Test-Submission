@@ -1,0 +1,393 @@
+
+{
+  "dataset_info": {
+    "title": "A Beginner's Guide to Linux Kernel Development - Q&A Dataset",
+    "total_questions": 54,
+    "categories": [
+      "linux kernel development process",
+      "patches",
+      "Working with the linux kernel community",
+      "Configuring Your Development System",
+      "Exploring the Linux kernel sources",
+      "Building and Installing your first kernel",
+      "Writing your First kernel patch",
+      "Getting your patch ready and sending it",
+      "All about testing",
+      "Debugging Overview"
+    ],
+    "difficulty_levels": ["easy", "medium", "hard"]
+  },
+  "questions":[
+  {
+    "question": "What is the purpose of patches in Linux kernel development?",
+    "answer": "Patches are small incremental changes that add new features, enhance existing functionality, or fix bugs in the Linux kernel.",
+    "difficulty": "easy",
+    "tags": ["patches", "development"],
+    "category": "linux kernel development process"
+  },
+  {
+    "question": "How often is a new Linux kernel release typically made, and what is the basis for these releases?",
+    "answer": "A new Linux kernel release is made every 10 to 11 weeks. These releases are time-based rather than feature-based, meaning they are scheduled based on time, not on the completion of specific features.",
+    "difficulty": "medium",
+    "tags": ["release", "schedule"],
+    "category": "linux kernel development process"
+  },
+  {
+    "question": "Describe the nature of the Linux kernel development cycle in terms of scheduling and maintenance.",
+    "answer": "The Linux kernel follows a continuous development model that operates 24/7/365, producing a new mainline release roughly every 2+ months, along with weekly stable and extended stable releases. Development and integration of new releases happen in parallel.",
+    "difficulty": "hard",
+    "tags": ["development", "schedule", "mainline"],
+    "category": "linux kernel development process"
+  },
+  {
+    "question": "What happens during the 2-week merge window after a new Linux kernel is released?",
+    "answer": "During the 2-week merge window, Linus Torvalds pulls code from subsystem maintainers via signed git pull requests. All major new features are integrated into the kernel at this stage, with over 10,000 change sets being merged.",
+    "difficulty": "medium",
+    "tags": ["merge window", "subsystems"],
+    "category": "linux kernel development process"
+  },
+  {
+    "question": "What is the purpose of release candidates (rc) in the Linux kernel release cycle?",
+    "answer": "Release candidates (rc) are part of the bug-fixing phase after the merge window. Starting with rc1, they are released weekly (rc2, rc3, etc.) to address bugs and regressions until the kernel is stable.",
+    "difficulty": "easy",
+    "tags": ["rc", "release cycle"],
+    "category": "linux kernel development process"
+  },
+  {
+    "question": "What is the linux-next tree and what is its purpose?",
+    "answer": "The linux-next tree is an integration tree maintained by Stephen Rothwell. It pulls in code from many subsystem trees for integration testing and helps identify merge conflicts before code reaches the mainline kernel.",
+    "difficulty": "medium",
+    "tags": ["linux-next", "integration", "subsystems"],
+    "category": "linux kernel development process"
+  },
+  {
+    "question": "What is the role of subsystem maintainers in the Linux kernel development process?",
+    "answer": "Each major subsystem has its own maintainer(s) who manage the corresponding tree and handle patch submissions. They send pull requests to Linus during merge windows and also maintain subsystem mailing lists for patch discussions.",
+    "difficulty": "medium",
+    "tags": ["subsystems", "maintainers", "development"],
+    "category": "linux kernel development process"
+  },
+  {
+    "question": "What is the purpose of patches in Linux kernel development?",
+    "answer": "Patches are small incremental changes that add new features, enhance existing functionality, or fix bugs in the Linux kernel.",
+    "difficulty": "easy",
+    "tags": ["patches", "development"],
+    "category": "patches"
+  },
+  {
+    "question": "How often is a new Linux kernel release typically made, and what is the basis for these releases?",
+    "answer": "A new Linux kernel release is made every 10 to 11 weeks. These releases are time-based rather than feature-based, meaning they are scheduled based on time, not on the completion of specific features.",
+    "difficulty": "medium",
+    "tags": ["release", "schedule"],
+    "category": "patches"
+  },
+  {
+    "question": "Describe the nature of the Linux kernel development cycle in terms of scheduling and maintenance.",
+    "answer": "The Linux kernel follows a continuous development model that operates 24/7/365, producing a new mainline release roughly every 2+ months, along with weekly stable and extended stable releases. Development and integration of new releases happen in parallel.",
+    "difficulty": "hard",
+    "tags": ["development", "schedule", "mainline"],
+    "category": "patches"
+  },
+  {
+    "question": "What happens during the 2-week merge window after a new Linux kernel is released?",
+    "answer": "During the 2-week merge window, Linus Torvalds pulls code from subsystem maintainers via signed git pull requests. All major new features are integrated into the kernel at this stage, with over 10,000 change sets being merged.",
+    "difficulty": "medium",
+    "tags": ["merge window", "subsystems"],
+    "category": "patches"
+  },
+  {
+    "question": "What is the purpose of release candidates (rc) in the Linux kernel release cycle?",
+    "answer": "Release candidates (rc) are part of the bug-fixing phase after the merge window. Starting with rc1, they are released weekly (rc2, rc3, etc.) to address bugs and regressions until the kernel is stable.",
+    "difficulty": "easy",
+    "tags": ["rc", "release cycle"],
+    "category": "patches"
+  },
+  {
+    "question": "What is the linux-next tree and what is its purpose?",
+    "answer": "The linux-next tree is an integration tree maintained by Stephen Rothwell. It pulls in code from many subsystem trees for integration testing and helps identify merge conflicts before code reaches the mainline kernel.",
+    "difficulty": "medium",
+    "tags": ["linux-next", "integration", "subsystems"],
+    "category": "patches"
+  },
+  {
+    "question": "What is the role of subsystem maintainers in the Linux kernel development process?",
+    "answer": "Each major subsystem has its own maintainer(s) who manage the corresponding tree and handle patch submissions. They send pull requests to Linus during merge windows and also maintain subsystem mailing lists for patch discussions.",
+    "difficulty": "medium",
+    "tags": ["subsystems", "maintainers", "development"],
+    "category": "patches"
+  },
+  {
+    "question": "What is a 'patch' in the context of Linux kernel development?",
+    "answer": "In Linux kernel development, a 'patch' refers to small incremental changes made to the kernel, named after the historical tool used for incremental text file changes.",
+    "difficulty": "easy",
+    "tags": ["patch", "definition"],
+    "category": "patches"
+  },
+  {
+    "question": "What are the key characteristics of a Linux kernel patch regarding its scope and impact?",
+    "answer": "Each patch should implement one independent modification, stand on its own, and not break the kernel build. This approach helps in isolating regressions and simplifies reverting problematic patches. Complex changes are split into smaller patches.",
+    "difficulty": "medium",
+    "tags": ["patch", "characteristics", "best practices"],
+    "category": "patches"
+  },
+  {
+    "question": "What version control system is used for Linux kernel development, and who started it?",
+    "answer": "Linux kernel development uses Git, which was started by Linus Torvalds.",
+    "difficulty": "easy",
+    "tags": ["git", "version control"],
+    "category": "patches"
+  },
+  {
+    "question": "What is the significance of the 'Signed-off-by' tag in a Linux kernel patch?",
+    "answer": "The 'Signed-off-by' tag certifies that the developer's patch is their original work or that they have the right to pass it on as an open-source patch, indicating compliance with the Developer's Certificate of Origin.",
+    "difficulty": "medium",
+    "tags": ["signed-off-by", "certification", "legal"],
+    "category": "patches"
+  },
+  {
+    "question": "How is the Commit ID generated for a Linux kernel patch, and what is its primary benefit?",
+    "answer": "The Commit ID is an auto-generated SHA-1 hash derived from a cryptographic hash function, incorporating all essential patch information. Its primary benefit is providing a tamperproof and fast way to compare commits, making git pull requests efficient.",
+    "difficulty": "hard",
+    "tags": ["commit ID", "SHA-1", "git"],
+    "category": "patches"
+  },
+  {
+    "question": "Explain the common conventions for email subject lines when submitting Linux kernel patches, including [PATCH], [PATCH RFC], and [PATCH vX].",
+    "answer": "`[PATCH]` indicates the email contains a patch. `[PATCH RFC]` or `[RFC PATCH]` signifies a 'Request For Comments' on the patch. `[PATCH vX]` denotes that the patch is the Xth version of a specific change being submitted.",
+    "difficulty": "medium",
+    "tags": ["email conventions", "patch versions", "RFC"],
+    "category": "patches"
+  },
+  {
+    "question": "What is the purpose of including patch version history, and where is it typically placed in the patch file?",
+    "answer": "Patch version history is required when sending re-worked patches to document changes between versions. It's added after '---' and before the 'start of the diff' in the patch file. This information aids reviews but is not included in the final commit log. New patch versions should start a new email thread.",
+    "difficulty": "hard",
+    "tags": ["patch history", "versioning", "email etiquette"],
+    "category": "patches"
+  },
+  {
+    "question": "What is the primary purpose of the Linux Kernel Contributor Covenant Code of Conduct?",
+    "answer": "It ensures that contributors and maintainers foster an open and welcoming community, valuing diversity of thought and providing a respectful environment for discussions and consensus-building on technical problems.",
+    "difficulty": "easy",
+    "tags": ["code of conduct", "community", "welcoming environment"],
+    "category": "Working with the linux kernel community"
+  },
+  {
+    "question": "What does a contributor agree to by sending a patch with their sign-off in the Linux kernel community?",
+    "answer": "By sending a patch with their sign-off, contributors agree to abide by the Linux Kernel Contributor Covenant Code of Conduct and its Interpretation, which outline rules and specific guidelines for conduct within the community.",
+    "difficulty": "medium",
+    "tags": ["code of conduct", "sign-off", "contributor agreement"],
+    "category": "Working with the linux kernel community"
+  },
+  {
+    "question": "Under which license is the Linux Kernel provided, and what is the associated exception?",
+    "answer": "The Linux Kernel is provided under the terms of the GNU General Public License version 2 only (GPL-2.0), with an explicit syscall exception described in LICENSES/exceptions/Linux-syscall-note.",
+    "difficulty": "medium",
+    "tags": ["licensing", "GPL-2.0", "syscall exception"],
+    "category": "Working with the linux kernel community"
+  },
+  {
+    "question": "What is the primary intent behind the Linux Kernel Enforcement Statement regarding software usage and legal action?",
+    "answer": "The intent is to encourage more use of the software and eliminate uncertainty about compliance, with legal action viewed as a last resort, initiated only when other community efforts have failed to resolve problems.",
+    "difficulty": "hard",
+    "tags": ["enforcement statement", "compliance", "legal action"],
+    "category": "Working with the linux kernel community"
+  },
+  {
+    "question": "What are the initial steps for setting up a Linux kernel development system?",
+    "answer": "The first steps involve choosing a development system, such as a regular laptop, and installing a Linux distribution like Fedora, Debian, OpenSUSE, or Ubuntu.",
+    "difficulty": "easy",
+    "tags": ["setup", "development system", "linux distribution"],
+    "category": "Configuring Your Development System"
+  },
+  {
+    "question": "What are the recommended disk space and essential packages for building Linux kernels on an x86_64 Ubuntu system?",
+    "answer": "It's recommended to allocate 3 GB disk space for the boot partition. Essential packages to install include `build-essential`, `vim`, `git`, `cscope`, `libncurses-dev`, `libssl-dev`, `bison`, `flex`, and `git-email`.",
+    "difficulty": "medium",
+    "tags": ["disk space", "packages", "ubuntu", "build"],
+    "category": "Configuring Your Development System"
+  },
+  {
+    "question": "Which tool is highly recommended for sending patches in Linux kernel development, and how is it configured?",
+    "answer": "`git send-email` is highly recommended for sending patches. It is configured using the `sendemail` option in the `.gitconfig` file, requiring SMTP server details (e.g., for Gmail, an app-specific password if 2-factor authentication is enabled).",
+    "difficulty": "medium",
+    "tags": ["git send-email", "patch submission", "configuration", "email client"],
+    "category": "Configuring Your Development System"
+  },
+  {
+    "question": "List key email etiquette rules to follow when interacting with the Linux kernel community regarding patches and responses.",
+    "answer": "Key rules include: never send patches as attachments, avoid attachments in general (except for logs/configs when reporting bugs), always 'bottom post' responses, 'inline post' by stripping irrelevant parts of messages, disable HTML format for compose messages, and do not include private information in email signatures.",
+    "difficulty": "hard",
+    "tags": ["email etiquette", "communication", "patches", "mailing lists"],
+    "category": "Configuring Your Development System"
+  },
+    {
+    "question": "Where can one find information on the latest stable and mainline Linux kernel releases?",
+    "answer": "Information on the latest stable and mainline Linux kernel releases can be found on The Linux Kernel Archives web page.",
+    "difficulty": "easy",
+    "tags": ["linux kernel archives", "releases", "mainline"],
+    "category": "Exploring the Linux kernel sources"
+  },
+  {
+    "question": "What is the command to clone Linus Torvalds' mainline Linux kernel tree?",
+    "answer": "The command to clone Linus's mainline Linux kernel tree is `git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git linux_mainline`.",
+    "difficulty": "easy",
+    "tags": ["git clone", "mainline", "kernel sources"],
+    "category": "Exploring the Linux kernel sources"
+  },
+  {
+    "question": "After cloning the Linux mainline, what is typically found in the root directory of the cloned repository?",
+    "answer": "The root directory contains various subdirectories like `arch`, `block`, `drivers`, `fs`, `include`, `kernel`, `mm`, `net`, `security`, `sound`, `tools`, `usr`, `virt`, and important files such as `COPYING`, `CREDITS`, `Kbuild`, `Kconfig`, `LICENSES`, `Makefile`, `MAINTAINERS`, and `README`.",
+    "difficulty": "medium",
+    "tags": ["root directory", "kernel structure", "cloned repository"],
+    "category": "Exploring the Linux kernel sources"
+  },
+  {
+    "question": "In the Linux kernel source tree, where does the bulk of the kernel code reside?",
+    "answer": "The bulk of the Linux kernel code lives under the `drivers` subdirectory.",
+    "difficulty": "easy",
+    "tags": ["drivers", "kernel code", "source tree"],
+    "category": "Exploring the Linux kernel sources"
+  },
+  {
+    "question": "Name three important files or scripts in the Linux kernel source tree that developers frequently use.",
+    "answer": "Developers frequently use `Makefile` and `MAINTAINERS` files in the main directory, and scripts like `scripts/get_maintainer.pl` and `scripts/checkpatch.pl`.",
+    "difficulty": "medium",
+    "tags": ["kernel tools", "Makefile", "MAINTAINERS", "scripts"],
+    "category": "Exploring the Linux kernel sources"
+  },
+  {
+    "question": "How can a developer look at the history of source files or generate a patch for a specific commit in the Linux kernel repository?",
+    "answer": "Developers can use `cregit` or `git log` to look at the history of source files. To generate a patch for a specific commit ID, the command `git format-patch -1 <commit ID>` is used.",
+    "difficulty": "medium",
+    "tags": ["git log", "git format-patch", "commit history", "patch generation"],
+    "category": "Exploring the Linux kernel sources"
+  },
+  {
+    "question": "What is cregit-Linux, and who are some of its creators?",
+    "answer": "Cregit-Linux is a tool for viewing the Linux kernel, created by Daniel German, Alexandre Courouble, Bram Adams, and Kate Stewart. It provides a visual representation of the kernel's structure and contents.",
+    "difficulty": "hard",
+    "tags": ["cregit", "kernel visualization", "tools"],
+    "category": "Exploring the Linux kernel sources"
+  },
+  {
+    "question": "How do you clone the stable Linux kernel Git repository, and what is a typical initial step after cloning?",
+    "answer": "To clone the stable kernel, use `git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git linux_stable`. After cloning, a typical initial step is to navigate into the `linux_stable` directory and check available stable branches using `git branch -a | grep linux-5` (or similar for the desired major version).",
+    "difficulty": "easy",
+    "tags": ["clone", "stable kernel", "git", "branches"],
+    "category": "Building and Installaing your first kernel"
+  },
+  {
+    "question": "What is the safest approach for configuring the kernel for the very first install, and how can you achieve this?",
+    "answer": "The safest approach is to start with the distribution's current kernel configuration. This can be done by copying the configuration file (e.g., `config-5.0.0-21-generic`) from `/boot` to `.config` in your cloned kernel source directory, followed by running `make oldconfig` or `make localmodconfig` to generate a tailored configuration.",
+    "difficulty": "medium",
+    "tags": ["configuration", "first install", "make oldconfig", "make localmodconfig", "boot config"],
+    "category": "Building and Installaing your first kernel"
+  },
+  {
+    "question": "What are the commands to compile and install a new Linux kernel, and what important steps should be taken before rebooting?",
+    "answer": "To compile, use `make -jX all` (where X is the number of parallel jobs). To install, use `su -c \"make modules_install install\"`. Before rebooting, it's crucial to save `dmesg` logs from the current kernel for comparison (`dmesg -t > dmesg_current`) and ensure Secure Boot is disabled if necessary using `mokutil --disable-validation`.",
+    "difficulty": "hard",
+    "tags": ["compile", "install", "make", "dmesg", "secure boot", "reboot"],
+    "category": "Building and Installaing your first kernel"
+  },
+  {
+    "question": "What is the purpose of the `.gitconfig` file in your home directory for kernel development?",
+    "answer": "The `.gitconfig` file is a user-specific Git configuration file that stores global Git options such as your name, email, preferred editor, and `sendemail` settings. This information is crucial for commits and patch generation.",
+    "difficulty": "easy",
+    "tags": ["gitconfig", "configuration", "git", "user settings"],
+    "category": "Writing your First kernel patch"
+  },
+  {
+    "question": "Why is it important for the email in your `.gitconfig` to match the 'From' and 'Signed-off-by' lines in your patches?",
+    "answer": "The email in your `.gitconfig` must match the 'From' and 'Signed-off-by' lines in your patches because Linux kernel developers will not accept patches where these emails differ. This ensures proper attribution and adherence to the Developer's Certificate of Origin.",
+    "difficulty": "medium",
+    "tags": ["email matching", "signed-off-by", "gitconfig", "patch acceptance"],
+    "category": "Writing your First kernel patch"
+  },
+  {
+    "question": "When configuring kernel drivers, what are the three options for installation, and which is generally recommended to avoid large kernel images?",
+    "answer": "The three options for driver installation are: Disabled, Built into the kernel (vmlinux image) to be loaded at boot time, or Built as a module (`.ko` files) to be loaded as needed using `modprobe`. Building drivers as modules is generally recommended to avoid large kernel images, as they are loaded on demand.",
+    "difficulty": "medium",
+    "tags": ["kernel configuration", "drivers", "modules", "vmlinux"],
+    "category": "Writing your First kernel patch"
+  },
+  {
+    "question": "Before committing changes for a new patch, what critical tool should be run, and what are the key guidelines for writing good commit messages?",
+    "answer": "Before committing, `checkpatch.pl` should be run on the diff or generated patch to verify compliance with Linux kernel coding style guidelines. For commit messages, it's important to have a short subject line and a longer description explaining *why* the change is needed, rather than just *what* the code does.",
+    "difficulty": "hard",
+    "tags": ["checkpatch", "commit message", "coding style", "patch workflow"],
+    "category": "Writing your First kernel patch"
+  },
+  {
+    "question": "How do you determine the correct recipients for sending a Linux kernel patch for review?",
+    "answer": "The `scripts/get_maintainer.pl` script is used to determine the correct recipients. The output lists maintainers, commit signers, supporters, and relevant mailing lists. Maintainers, commit signers, and supporters should be on the 'To' list, while mailing lists are on the 'Cc' list.",
+    "difficulty": "easy",
+    "tags": ["get_maintainer.pl", "patch recipients", "mailing lists", "review process"],
+    "category": "Getting your patch ready and sending it"
+  },
+  {
+    "question": "What Git commands are used to generate and send a patch to the identified recipients?",
+    "answer": "To generate a patch with specified recipients, use `git format-patch -1 <commit ID> --to=<email1> --to=<email2> --cc=<mailing_list1> --cc=<mailing_list2>`. To send the generated patch file, use `git send-email <patch_file>`.",
+    "difficulty": "medium",
+    "tags": ["git format-patch", "git send-email", "patch submission", "commands"],
+    "category": "Getting your patch ready and sending it"
+  },
+  {
+    "question": "What are some best practices to follow during the Linux kernel patch review process, especially regarding feedback and version history?",
+    "answer": "Be patient and wait at least one week for a response. Always thank reviewers, address their comments, and don't hesitate to ask clarifying questions. When sending a new version, include version history *after* the '---' and before the diff, describing changes from the previous version, but *not* in the commit log.",
+    "difficulty": "hard",
+    "tags": ["review process", "best practices", "feedback", "version history", "patch etiquette"],
+    "category": "Getting your patch ready and sending it"
+  },
+  {
+    "question": "How can `checkpatch.pl` be integrated into a Git workflow to automate coding style checks, and how should one handle its suggestions?",
+    "answer": "`checkpatch.pl` can be automated using a `git post-commit` hook. You can edit the `.git/hooks/post-commit` file to execute `git show --format=email HEAD | ./scripts/checkpatch.pl --strict --codespell`. When `checkpatch.pl` suggests changes, use your best judgment; don't make changes that reduce readability, and amend commits if necessary.",
+    "difficulty": "hard",
+    "tags": ["checkpatch.pl", "git hooks", "automation", "coding style", "post-commit"],
+    "category": "Getting your patch ready and sending it"
+  },
+    {
+    "question": "How are Linux kernel patches applied, and what is the key difference between `patch -p1` and `git apply --index`?",
+    "answer": "Linux kernel patches can be applied using `patch -p1 < file.patch` or `git apply --index file.patch`. The key difference is that `git apply --index` understands new files introduced by the patch and tracks them, whereas `patch -p1` does not, leaving new files untracked by Git.",
+    "difficulty": "medium",
+    "tags": ["applying patches", "patch command", "git apply", "git tracking"],
+    "category": "All about testing"
+  },
+  {
+    "question": "After installing a new kernel, what are some essential basic tests to perform, and what should be closely monitored in `dmesg` output?",
+    "answer": "Essential basic tests include checking networking (wired/wifi), SSH functionality, large file transfers (rsync over SSH), Git operations, web browsing, email, file downloads, and USB device connectivity. In `dmesg`, closely monitor for any new `crit`, `alert`, `emerg`, or `err` level messages, and pay attention to new `warn` messages and stack traces from `WARN_ON`.",
+    "difficulty": "hard",
+    "tags": ["basic testing", "dmesg", "kernel logs", "regressions", "functional testing"],
+    "category": "All about testing"
+  },
+  {
+    "question": "How can a simple stress test be performed on a new Linux kernel, and what might performance regressions indicate?",
+    "answer": "A simple stress test involves running multiple kernel compiles in parallel (e.g., `time make -jX all` for several Git repositories). Performance regressions, indicated by longer compile times compared to older runs, could suggest issues in various kernel modules like memory, filesystems, DMA, or drivers, which are exercised during compilation.",
+    "difficulty": "hard",
+    "tags": ["stress testing", "performance regression", "kernel compile", "dmesg", "debugging"],
+    "category": "All about testing"
+  },
+  {
+    "question": "What are some initial questions to ask when approaching a debugging problem in the Linux kernel?",
+    "answer": "Initial questions include: Is the problem easily reproducible? Is there a reproducer or test that consistently triggers the bug? Are there any panic, error, or debug messages in `dmesg` when the bug is triggered? Is reproducing the problem time-sensitive?",
+    "difficulty": "easy",
+    "tags": ["debugging", "problem identification", "reproducibility", "dmesg"],
+    "category": "Debugging Overview"
+  },
+  {
+    "question": "How can panic messages in the Linux kernel be decoded and analyzed?",
+    "answer": "Panic messages can be decoded using the `scripts/decode_stacktrace.sh` tool. You need to save the panic trace from `dmesg` into a text file and then run the tool, providing the `vmlinux` path and optionally the base path of the Git repo and modules path if the panic is in a dynamically loaded kernel module.",
+    "difficulty": "medium",
+    "tags": ["panic message", "decode_stacktrace.sh", "kernel oops", "stack trace", "debugging tools"],
+    "category": "Debugging Overview"
+  },
+  {
+    "question": "Explain how event tracing can be used for debugging in the Linux kernel, including how to enable events and where to find the traces.",
+    "answer": "Event tracing allows enabling events on a running system without recompilation (requires root access to `/sys/kernel/debug`). Events are listed in `/sys/kernel/debug/tracing/available_events`. To enable, `cd` into the relevant event directory (e.g., `/sys/kernel/debug/tracing/events/skb`) and `echo 1 > enable`. Traces are found in `/sys/kernel/debug/tracing/trace`. For time-sensitive problems, avoid adding extra debug messages as it can alter timing.",
+    "difficulty": "hard",
+    "tags": ["event tracing", "ftrace", "sysfs", "debugging techniques", "runtime debugging"],
+    "category": "Debugging Overview"
+  }
+  ]
+}
